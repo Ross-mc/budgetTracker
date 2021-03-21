@@ -52,3 +52,5 @@ const checkDatabase = () => {
     }
   };
 };
+
+window.addEventListener("online", checkDatabase);
