@@ -8,3 +8,16 @@ request.onupgradeneeded = event => {
         autoIncrement: true
     })
 }
+
+request.onsuccess = event => {
+    db = event.target.result;
+
+    if(navigator.onLine){
+        checkDatabase();
+    }
+}
+
+request.onerror = event => {
+    console.log('An error occured: ', event)
+}
+
